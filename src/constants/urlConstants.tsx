@@ -1,0 +1,33 @@
+export const BASE_URL = import.meta.env.VITE_API_URL;
+
+export const URLS = {
+    LOGIN: `${BASE_URL}/admin-login`,
+    CREATE_ADMIN: `${BASE_URL}/admin`,
+    GET_ADMINS: `${BASE_URL}/admin`,
+    DELETE_ADMIN: (id: string) => `${BASE_URL}/admin/${id}`,
+    EDIT_ADMIN: (id: string) => `${BASE_URL}/admin/${id}`,
+    FORGOT_PASSWORD: (email: string) => `${BASE_URL}/forgot-password?email=${email}`,
+    RESEND_OTP: (email: string) => `${BASE_URL}/resend-otp?email=${email}`,
+    VERIFY_OTP: (email: string, otp: string) => `${BASE_URL}/verify-otp?email=${email}&otp=${otp}`,
+    CHANGE_PASSWORD: (password: string) => `${BASE_URL}/change-password?password=${password}`,
+    GET_ADMIN_DETAILS: `${BASE_URL}/get-admin-details`,
+    GET_SLOTS: `${BASE_URL}/slots`,
+    CREATE_SLOT: `${BASE_URL}/slots`,
+    UPDATE_SLOTS: (id: string) => `${BASE_URL}/slots/${id}`,
+    UPDATE_CONFIRMATION_EMAIL: `${BASE_URL}/booking-email`,
+    CREATE_TUTORIAL: `${BASE_URL}/tutorials`,
+    GET_TUTORIALS: `${BASE_URL}/tutorials`,
+    EDIT_TUTORIAL: (id: string) => `${BASE_URL}/tutorials/${id}`,
+    DELETE_TUTORIAL: (id: string) => `${BASE_URL}/tutorials/${id}`,
+    CREATE_CHAPTER: `${BASE_URL}/chapters`,
+    DELETE_TUTORIAL_ATTACHMENT: `${BASE_URL}/tutorial-attachments`,
+    DELETE_CHAPTER_ATTACHMENT: `${BASE_URL}/chapter-attachments`,
+    // GET_CHAPTERS: (id: string) => `${BASE_URL}/chapters/${id}`,
+    GET_CHAPTERS: `${BASE_URL}/chapters`,
+    EDIT_CHAPTER: (id: string) => `${BASE_URL}/chapters/${id}`,
+    DELETE_CHAPTER: (id: string) => `${BASE_URL}/chapters/${id}`,
+    CREATE_DEVICE: `${BASE_URL}/device-types`,
+    GET_DEVICES: `${BASE_URL}/device-types`,
+    GET_CONFIGURATIONS: (device_type_id: string) => `${BASE_URL}/configurations?device_type_id=${device_type_id}`,
+
+};
